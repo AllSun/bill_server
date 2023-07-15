@@ -79,7 +79,7 @@ class UserController extends Controller {
       };
       return;
     }
-
+    // token加盐，使用secret
     const token = app.jwt.sign({
       id: userInfo.id,
       username: userInfo.username,
